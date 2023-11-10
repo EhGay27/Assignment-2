@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('foodlist', function (Blueprint $table) {
+        Schema::create('foodlists', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('itemname');
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::drop('foodlist');
+        Schema::drop('foodlists');
     }
 };

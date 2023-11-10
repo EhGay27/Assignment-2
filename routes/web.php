@@ -30,4 +30,4 @@ Route::put('/foodlist/{foodlist}', [FoodlistController::class, 'update'])->name(
 Route::post('/foodlist/create', [FoodlistController::class, 'store']);
 Route::get('/foodlist', [FoodlistController::class, 'index']);
 
-Route::get('foodlist/{id}', [FoodlistController::class, 'destroy'])->name('foodlist#delete');
+Route::delete('foodlist/{id}', [FoodlistController::class, 'destroy'])->name('foodlist#delete');

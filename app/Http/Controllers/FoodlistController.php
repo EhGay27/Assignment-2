@@ -77,11 +77,10 @@ class FoodlistController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($foodlist)
+    public function destroy($id)
     {
-        $foodlist = Foodlist::find($foodlist);
+        $foodlist = Foodlist::find($id);
         $foodlist->delete($foodlist);
-        dd($foodlist);
         return redirect('/foodlist')->with('success', 'Foodlist deleted successfully');
     }
 }
